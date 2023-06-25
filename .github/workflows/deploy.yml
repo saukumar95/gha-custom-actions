@@ -78,7 +78,7 @@ jobs:
         uses: ./.github/actions/deploy-s3-javascript
         with:
           source-path: '/root'
-          destionation-path: '/home/'
+          destination-path: '/home/'
       - name: Output info results
         run: | 
           ls
