@@ -81,5 +81,5 @@ jobs:
           destination-path: '/home/runner/work/gha-custom-actions/test_moved.json'
       - name: Output info results verfication
         run: |
-          cd /home/runner/work/gha-custom-actions/
+          cd /github/workspace/
           ls
