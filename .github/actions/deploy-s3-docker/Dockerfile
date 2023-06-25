@@ -1,6 +1,6 @@
 FROM python:3
 
-COPY requirement.txt /requirement.txt
+COPY requirements.txt /requirements.txt
 
 RUN pip intall -r requirement.txt
 
