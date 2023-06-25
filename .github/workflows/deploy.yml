@@ -64,3 +64,12 @@ jobs:
         run: ls
       - name: Deploy site
         run: echo "Deploying..."
+  information:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output information
+        id: info
+        uses: ./.github/actions/deploy-s3-javascript
+      - name: Output info results
+        run: | 
+          echo "Sum output : ${{ steps.info.outputs.sum }}"

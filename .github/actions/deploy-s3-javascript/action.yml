@@ -1,0 +1,15 @@
+name: 'Deploy to AWS S3'
+description: 'Deploy a static website via AWS S3'
+inputs:
+  a:
+    description: 'First input number for addition'
+    required: true
+  b:
+    description: 'Second input number for addition'
+    required: true
+outputs:
+  sum:
+    description: 'Output after addition of inputs'
+runs:
+  using: 'node16'
+  main: 'index.js'
