@@ -69,12 +69,16 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v3
+      - name: Print code checkout location
+        run: |
+          ls
+          pwd
       - name: Output information
         id: info
         uses: ./.github/actions/deploy-s3-javascript
         with:
-          a: 21
-          b: 22
+          source-path: '/root'
+          destionation-path: '/home/'
       - name: Output info results
         run: | 
-          echo "Sum output : ${{ steps.info.outputs.sum }}"
+          ls
