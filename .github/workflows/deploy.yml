@@ -69,6 +69,10 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v3
+      - name: Get current work-directory
+        run: |
+          ls
+          pwd
       - name: Output information
         id: info
         uses: ./.github/actions/deploy-s3-docker
