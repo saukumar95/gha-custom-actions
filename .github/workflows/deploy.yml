@@ -69,16 +69,13 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v3
-      - name: Print code checkout location
-        run: |
-          ls
-          pwd
       - name: Output information
         id: info
         uses: ./.github/actions/deploy-s3-javascript
         with:
-          source-path: '/root'
-          destination-path: '/home/'
+          source-path: '/home/runner/work/gha-custom-actions/gha-custom-actions/test.json'
+          destination-path: '/home/runner/work/gha-custom-actions/test_moved.json'
       - name: Output info results
-        run: | 
+        run: |
+          cd /home/runner/work/gha-custom-actions/
           ls
